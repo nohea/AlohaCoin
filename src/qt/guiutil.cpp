@@ -8,10 +8,16 @@
 #include <QDoubleValidator>
 #include <QFont>
 #include <QLineEdit>
+#if QT_VERSION >= 0x050000
+#include <QUrlQuery>
+#else
 #include <QUrl>
+#endif
 #include <QTextDocument> // For Qt::escape
 #include <QAbstractItemView>
+#undef loop
 #include <QApplication>
+#define loop                for (;;)
 #include <QClipboard>
 #include <QFileDialog>
 #include <QDesktopServices>
@@ -60,7 +66,12 @@ bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out)
     SendCoinsRecipient rv;
     rv.address = uri.path();
     rv.amount = 0;
+#if QT_VERSION < 0x050000
     QList<QPair<QString, QString> > items = uri.queryItems();
+#else
+    QUrlQuery uriQuery(uri);
+    QList<QPair<QString, QString> > items = uriQuery.queryItems();
+#endif
     for (QList<QPair<QString, QString> >::iterator i = items.begin(); i != items.end(); i++)
     {
         bool fShouldReturnFalse = false;
@@ -113,7 +124,7 @@ bool parseBitcoinURI(QString uri, SendCoinsRecipient *out)
 
 QString HtmlEscape(const QString& str, bool fMultiLine)
 {
-    QString escaped = Qt::escape(str);
+  QString escaped = QString(str).toHtmlEscaped();
     if(fMultiLine)
     {
         escaped = escaped.replace("\n", "<br>\n");
@@ -148,7 +159,11 @@ QString getSaveFileName(QWidget *parent, const QString &caption,
     QString myDir;
     if(dir.isEmpty()) // Default to user documents location
     {
+#if QT_VERSION >= QT_VERSION_CHECK(5,0,0)
+        myDir = QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation);
+#else
         myDir = QDesktopServices::storageLocation(QDesktopServices::DocumentsLocation);
+#endif
     }
     else
     {

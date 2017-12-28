@@ -376,7 +376,7 @@ string FormatMoney(int64 n, bool fPlus)
     int64 n_abs = (n > 0 ? n : -n);
     int64 quotient = n_abs/COIN;
     int64 remainder = n_abs%COIN;
-    string str = strprintf("%"PRI64d".%06"PRI64d, quotient, remainder);
+    string str = strprintf("%" PRI64d".%06" PRI64d, quotient, remainder);
 
     // Right-trim excess 0's before the decimal point:
     int nTrim = 0;
@@ -854,12 +854,12 @@ boost::filesystem::path GetDefaultDataDir()
 {
     namespace fs = boost::filesystem;
 
-    // Windows: C:\Documents and Settings\username\Application Data\AlohaCoin
-    // Mac: ~/Library/Application Support/AlohaCoin
-    // Unix: ~/.AlohaCoin
+    // Windows: C:\Documents and Settings\username\Application Data\AlohaCoinBKI
+    // Mac: ~/Library/Application Support/AlohaCoinBKI
+    // Unix: ~/.alohacoinbki
 #ifdef WIN32
     // Windows
-    return MyGetSpecialFolderPath(CSIDL_APPDATA, true) / "AlohaCoin";
+    return MyGetSpecialFolderPath(CSIDL_APPDATA, true) / "AlohaCoinBKI";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -871,10 +871,10 @@ boost::filesystem::path GetDefaultDataDir()
     // Mac
     pathRet /= "Library/Application Support";
     fs::create_directory(pathRet);
-    return pathRet / "AlohaCoin";
+    return pathRet / "AlohaCoinBKI";
 #else
     // Unix
-    return pathRet / ".alohacoin";
+    return pathRet / ".alohacoinbki";
 #endif
 #endif
 }
@@ -918,7 +918,7 @@ boost::filesystem::path GetConfigFile()
 {
     namespace fs = boost::filesystem;
 
-    fs::path pathConfigFile(GetArg("-conf", "alohacoin.conf"));
+    fs::path pathConfigFile(GetArg("-conf", "alohacoinbki.conf"));
     if (!pathConfigFile.is_complete()) pathConfigFile = GetDataDir(false) / pathConfigFile;
     return pathConfigFile;
 }
@@ -954,7 +954,7 @@ boost::filesystem::path GetPidFile()
 {
     namespace fs = boost::filesystem;
 
-    fs::path pathPidFile(GetArg("-pid", "alohacoind.pid"));
+    fs::path pathPidFile(GetArg("-pid", "alohacoinbkid.pid"));
     if (!pathPidFile.is_complete()) pathPidFile = GetDataDir() / pathPidFile;
     return pathPidFile;
 }
@@ -1047,7 +1047,7 @@ void AddTimeData(const CNetAddr& ip, int64 nTime)
 
     // Add data
     vTimeOffsets.input(nOffsetSample);
-    printf("Added time data, samples %d, offset %+"PRI64d" (%+"PRI64d" minutes)\n", vTimeOffsets.size(), nOffsetSample, nOffsetSample/60);
+    printf("Added time data, samples %d, offset %+" PRI64d" (%+" PRI64d" minutes)\n", vTimeOffsets.size(), nOffsetSample, nOffsetSample/60);
     if (vTimeOffsets.size() >= 5 && vTimeOffsets.size() % 2 == 1)
     {
         int64 nMedian = vTimeOffsets.median();
@@ -1082,10 +1082,10 @@ void AddTimeData(const CNetAddr& ip, int64 nTime)
         }
         if (fDebug) {
             BOOST_FOREACH(int64 n, vSorted)
-                printf("%+"PRI64d"  ", n);
+                printf("%+" PRI64d"  ", n);
             printf("|  ");
         }
-        printf("nTimeOffset = %+"PRI64d"  (%+"PRI64d" minutes)\n", nTimeOffset, nTimeOffset/60);
+        printf("nTimeOffset = %+" PRI64d"  (%+" PRI64d" minutes)\n", nTimeOffset, nTimeOffset/60);
     }
 }
 

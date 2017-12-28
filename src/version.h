@@ -29,10 +29,10 @@ extern const std::string CLIENT_BUILD;
 extern const std::string CLIENT_DATE;
 
 // alohacoin version - intended for display purpose ONLY
-#define ALOHACOIN_VERSION_MAJOR       0
-#define ALOHACOIN_VERSION_MINOR       1
+#define ALOHACOIN_VERSION_MAJOR       1
+#define ALOHACOIN_VERSION_MINOR       2
 #define ALOHACOIN_VERSION_REVISION    0
-#define ALOHACOIN_VERSION_BUILD       1
+#define ALOHACOIN_VERSION_BUILD       4
 
 static const int ALOHACOIN_VERSION =
                            1000000 * ALOHACOIN_VERSION_MAJOR

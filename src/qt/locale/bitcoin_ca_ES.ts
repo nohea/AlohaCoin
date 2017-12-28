@@ -1903,7 +1903,7 @@ Address: %4
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="14"/>
-        <source>Send command to -server or alohacoind</source>
+        <source>Send command to -server or alohacoinbkid</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1923,7 +1923,7 @@ Address: %4
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="18"/>
-        <source>Specify configuration file (default: alohacoin.conf)</source>
+        <source>Specify configuration file (default: alohacoinbki.conf)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

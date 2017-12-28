@@ -7,7 +7,9 @@
 #include "optionsmodel.h"
 #include "addresstablemodel.h"
 
+#undef loop
 #include <QApplication>
+#define loop                for (;;)
 #include <QClipboard>
 
 SendCoinsEntry::SendCoinsEntry(QWidget *parent) :

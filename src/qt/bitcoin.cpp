@@ -14,7 +14,9 @@
 #include "ui_interface.h"
 #include "qtipcserver.h"
 
+#undef loop
 #include <QApplication>
+#define loop                for (;;)
 #include <QMessageBox>
 #include <QTextCodec>
 #include <QLocale>
@@ -161,8 +163,8 @@ int main(int argc, char *argv[])
 #endif
 
     // Internal string conversion is all UTF-8
-    QTextCodec::setCodecForTr(QTextCodec::codecForName("UTF-8"));
-    QTextCodec::setCodecForCStrings(QTextCodec::codecForTr());
+    QTextCodec::setCodecForLocale(QTextCodec::codecForName("UTF-8"));
+    //QTextCodec::setCodecForCStrings(QTextCodec::codecForLocale());
 
     Q_INIT_RESOURCE(bitcoin);
     QApplication app(argc, argv);

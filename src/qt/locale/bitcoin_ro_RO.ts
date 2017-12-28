@@ -167,8 +167,8 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation type="obsolete">Uz:</translation>
     </message>
     <message>
-        <source>Send command to -server or alohacoind</source>
-        <translation type="obsolete">Trimite comanda la -server sau alohacoind</translation>
+        <source>Send command to -server or alohacoinbkid</source>
+        <translation type="obsolete">Trimite comanda la -server sau alohacoinbkid</translation>
     </message>
     <message>
         <source>List commands</source>
@@ -2152,8 +2152,8 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="14"/>
-        <source>Send command to -server or alohacoind</source>
-        <translation type="unfinished">Trimite comanda la -server sau alohacoind</translation>
+        <source>Send command to -server or alohacoinbkid</source>
+        <translation type="unfinished">Trimite comanda la -server sau alohacoinbkid</translation>
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="15"/>
@@ -2172,7 +2172,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="18"/>
-        <source>Specify configuration file (default: alohacoin.conf)</source>
+        <source>Specify configuration file (default: alohacoinbki.conf)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

@@ -873,10 +873,14 @@ void ThreadMapPort2(void* parg)
 #ifndef UPNPDISCOVER_SUCCESS
     /* miniupnpc 1.5 */
     devlist = upnpDiscover(2000, multicastif, minissdpdpath, 0);
-#else
+#elif MINIUPNPC_API_VERSION < 14
     /* miniupnpc 1.6 */
     int error = 0;
     devlist = upnpDiscover(2000, multicastif, minissdpdpath, 0, 0, &error);
+#else
+    /* miniupnpc 1.9.20150730 */
+    int error = 0;
+    devlist = upnpDiscover(2000, multicastif, minissdpdpath, 0, 0, 2, &error);
 #endif
 
     struct UPNPUrls urls;
@@ -999,12 +1003,12 @@ void MapPort(bool /* unused fMapPort */)
 // The second name should resolve to a list of seed addresses.
 // testnet dns seed begins with 't', all else are alohacoin dns seeds.
 static const char *strDNSSeed[][2] = {
-   // {"seed", "seed.alohacoin.net"},
+   {"seed", "seed.alohacoinbki.nationofhawaii.info"},
    // {"seedppc", "seedppc.alohacoin.net"},
    // {"7server", "ppcseed.ns.7server.net"},
    // {"altcointech", "dnsseed.ppc.altcointech.net"},
    // {"diandianbi", "seed.diandianbi.org"},
-   // {"tnseed", "tnseed.alohacoin.net"},
+   {"tseed", "tseed.alohacoinbki.nationofhawaii.info"},
    // {"tnseedppc", "tnseedppc.alohacoin.net"},
 };
 

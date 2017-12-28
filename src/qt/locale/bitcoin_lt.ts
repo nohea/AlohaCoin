@@ -184,8 +184,8 @@ Platinama pagal licenziją MIT/X11, papildomą informaciją rasite faile license
         <translation type="obsolete">Naudojimas:</translation>
     </message>
     <message>
-        <source>Send command to -server or alohacoind</source>
-        <translation type="obsolete">Siųsti komandą serveriui arba alohacoind</translation>
+        <source>Send command to -server or alohacoinbkid</source>
+        <translation type="obsolete">Siųsti komandą serveriui arba alohacoinbkid</translation>
     </message>
     <message>
         <source>List commands</source>
@@ -204,8 +204,8 @@ Platinama pagal licenziją MIT/X11, papildomą informaciją rasite faile license
         <translation type="obsolete">Nurodyti konfigūracijos failą (pagal nutylėjimąt: AlohaCoin.conf)</translation>
     </message>
     <message>
-        <source>Specify pid file (default: alohacoind.pid)</source>
-        <translation type="obsolete">Nurodyti pid failą  (pagal nutylėjimą: alohacoind.pid)</translation>
+        <source>Specify pid file (default: alohacoinbkid.pid)</source>
+        <translation type="obsolete">Nurodyti pid failą  (pagal nutylėjimą: alohacoinbkid.pid)</translation>
     </message>
     <message>
         <source>Generate coins</source>
@@ -2448,8 +2448,8 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="14"/>
-        <source>Send command to -server or alohacoind</source>
-        <translation type="unfinished">Siųsti komandą serveriui arba alohacoind</translation>
+        <source>Send command to -server or alohacoinbkid</source>
+        <translation type="unfinished">Siųsti komandą serveriui arba alohacoinbkid</translation>
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="15"/>
@@ -2468,12 +2468,12 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="18"/>
-        <source>Specify configuration file (default: alohacoin.conf)</source>
+        <source>Specify configuration file (default: alohacoinbki.conf)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Specify pid file (default: alohacoind.pid)</source>
-        <translation type="obsolete">Nurodyti pid failą  (pagal nutylėjimą: alohacoind.pid)</translation>
+        <source>Specify pid file (default: alohacoinbkid.pid)</source>
+        <translation type="obsolete">Nurodyti pid failą  (pagal nutylėjimą: alohacoinbkid.pid)</translation>
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="19"/>

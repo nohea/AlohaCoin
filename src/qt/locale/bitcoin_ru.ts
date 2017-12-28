@@ -183,8 +183,8 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation type="obsolete">Использование:</translation>
     </message>
     <message>
-        <source>Send command to -server or alohacoind</source>
-        <translation type="obsolete">Отправить команду на -server или alohacoind</translation>
+        <source>Send command to -server or alohacoinbkid</source>
+        <translation type="obsolete">Отправить команду на -server или alohacoinbkid</translation>
     </message>
     <message>
         <source>List commands</source>
@@ -204,7 +204,7 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation type="obsolete">Указать конфигурационный файл (по умолчанию: AlohaCoin.conf)</translation>
     </message>
     <message>
-        <source>Specify pid file (default: alohacoind.pid)</source>
+        <source>Specify pid file (default: alohacoinbkid.pid)</source>
         <translation type="obsolete">Указать pid-файл (по умолчанию: AlohaCoin.pid)</translation>
     </message>
     <message>
@@ -2455,8 +2455,8 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="14"/>
-        <source>Send command to -server or alohacoind</source>
-        <translation type="unfinished">Отправить команду на -server или alohacoind</translation>
+        <source>Send command to -server or alohacoinbkid</source>
+        <translation type="unfinished">Отправить команду на -server или alohacoinbkid</translation>
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="15"/>
@@ -2476,11 +2476,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="18"/>
-        <source>Specify configuration file (default: alohacoin.conf)</source>
+        <source>Specify configuration file (default: alohacoinbki.conf)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Specify pid file (default: alohacoind.pid)</source>
+        <source>Specify pid file (default: alohacoinbkid.pid)</source>
         <translation type="obsolete">Указать pid-файл (по умолчанию: AlohaCoin.pid)</translation>
     </message>
     <message>

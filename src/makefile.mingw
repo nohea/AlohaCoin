@@ -53,10 +53,10 @@
 #     mkdir miniupnpc
 #     cp *.h miniupnpc/
 #
-# - Build alohacoind.exe
+# - Build alohacoinbkid.exe
 #   in MinGW MSYS
 #     cd alohacoin/src
-#     make alohacoind.exe -f makefile.mingw USE_UPNP=1
+#     make alohacoinbkid.exe -f makefile.mingw USE_UPNP=1
 #
 #
 
@@ -136,12 +136,12 @@ OBJS= \
     obj/kernel.o
 
 
-all: alohacoind.exe
+all: alohacoinbkid.exe
 
 obj/%.o: %.cpp $(HEADERS)
 	g++ -c $(CFLAGS) -o $@ $<
 
-alohacoind.exe: $(OBJS:obj/%=obj/%)
+alohacoinbkid.exe: $(OBJS:obj/%=obj/%)
 	g++ $(CFLAGS) -o $@ $(LIBPATHS) $^ $(LIBS)
 
 TESTOBJS := $(patsubst test/%.cpp,obj-test/%.o,$(wildcard test/*.cpp))
@@ -153,7 +153,7 @@ test_bitcoin.exe: $(TESTOBJS) $(filter-out obj/init.o,$(OBJS:obj/%=obj/%))
 	g++ $(CFLAGS) -o $@ $(LIBPATHS) $^ -lboost_unit_test_framework $(LIBS)
 
 clean:
-	-del /Q alohacoind test_bitcoin
+	-del /Q alohacoinbkid test_bitcoin
 	-del /Q obj\*
 	-del /Q obj-test\*
 	-del /Q build.h

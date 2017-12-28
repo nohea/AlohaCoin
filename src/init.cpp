@@ -181,13 +181,13 @@ bool AppInit2(int argc, char* argv[])
         string strUsage = string() +
           _("AlohaCoin version") + " " + FormatFullVersion() + "\n\n" +
           _("Usage:") + "\t\t\t\t\t\t\t\t\t\t\n" +
-            "  alohacoind [options]                   \t  " + "\n" +
-            "  alohacoind [options] <command> [params]\t  " + _("Send command to -server or alohacoind") + "\n" +
-            "  alohacoind [options] help              \t\t  " + _("List commands") + "\n" +
-            "  alohacoind [options] help <command>    \t\t  " + _("Get help for a command") + "\n" +
+            "  alohacoinbkid [options]                   \t  " + "\n" +
+            "  alohacoinbkid [options] <command> [params]\t  " + _("Send command to -server or alohacoinbkid") + "\n" +
+            "  alohacoinbkid [options] help              \t\t  " + _("List commands") + "\n" +
+            "  alohacoinbkid [options] help <command>    \t\t  " + _("Get help for a command") + "\n" +
           _("Options:") + "\n" +
-            "  -conf=<file>     \t\t  " + _("Specify configuration file (default: alohacoin.conf)") + "\n" +
-            "  -pid=<file>      \t\t  " + _("Specify pid file (default: alohacoind.pid)") + "\n" +
+            "  -conf=<file>     \t\t  " + _("Specify configuration file (default: alohacoinbki.conf)") + "\n" +
+            "  -pid=<file>      \t\t  " + _("Specify pid file (default: alohacoinbkid.pid)") + "\n" +
             "  -gen             \t\t  " + _("Generate coins") + "\n" +
             "  -gen=0           \t\t  " + _("Don't generate coins") + "\n" +
             "  -min             \t\t  " + _("Start minimized") + "\n" +
@@ -366,7 +366,7 @@ bool AppInit2(int argc, char* argv[])
     nStart = GetTimeMillis();
     if (!LoadAddresses())
         strErrors << _("Error loading addr.dat") << "\n";
-    printf(" addresses   %15"PRI64d"ms\n", GetTimeMillis() - nStart);
+    printf(" addresses   %15" PRI64d"ms\n", GetTimeMillis() - nStart);
 
     InitMessage(_("Loading block index..."));
     printf("Loading block index...\n");
@@ -382,7 +382,7 @@ bool AppInit2(int argc, char* argv[])
         printf("Shutdown requested. Exiting.\n");
         return false;
     }
-    printf(" block index %15"PRI64d"ms\n", GetTimeMillis() - nStart);
+    printf(" block index %15" PRI64d"ms\n", GetTimeMillis() - nStart);
 
     InitMessage(_("Loading wallet..."));
     printf("Loading wallet...\n");
@@ -437,7 +437,7 @@ bool AppInit2(int argc, char* argv[])
     }
 
     printf("%s", strErrors.str().c_str());
-    printf(" wallet      %15"PRI64d"ms\n", GetTimeMillis() - nStart);
+    printf(" wallet      %15" PRI64d"ms\n", GetTimeMillis() - nStart);
 
     RegisterWallet(pwalletMain);
 
@@ -457,7 +457,7 @@ bool AppInit2(int argc, char* argv[])
         printf("Rescanning last %i blocks (from block %i)...\n", pindexBest->nHeight - pindexRescan->nHeight, pindexRescan->nHeight);
         nStart = GetTimeMillis();
         pwalletMain->ScanForWalletTransactions(pindexRescan, true);
-        printf(" rescan      %15"PRI64d"ms\n", GetTimeMillis() - nStart);
+        printf(" rescan      %15" PRI64d"ms\n", GetTimeMillis() - nStart);
     }
 
     InitMessage(_("Done loading"));

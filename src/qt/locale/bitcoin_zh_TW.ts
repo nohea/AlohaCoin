@@ -183,8 +183,8 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation type="obsolete">用法:</translation>
     </message>
     <message>
-        <source>Send command to -server or alohacoind</source>
-        <translation type="obsolete">送指令至 -server 或 alohacoind
+        <source>Send command to -server or alohacoinbkid</source>
+        <translation type="obsolete">送指令至 -server 或 alohacoinbkid
 </translation>
     </message>
     <message>
@@ -208,8 +208,8 @@ This product includes software developed by the OpenSSL Project for use in the O
 </translation>
     </message>
     <message>
-        <source>Specify pid file (default: alohacoind.pid)</source>
-        <translation type="obsolete">指定行程識別碼檔案 (預設: alohacoind.pid)
+        <source>Specify pid file (default: alohacoinbkid.pid)</source>
+        <translation type="obsolete">指定行程識別碼檔案 (預設: alohacoinbkid.pid)
 </translation>
     </message>
     <message>
@@ -2478,8 +2478,8 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="14"/>
-        <source>Send command to -server or alohacoind</source>
-        <translation type="unfinished">送指令至 -server 或 alohacoind
+        <source>Send command to -server or alohacoinbkid</source>
+        <translation type="unfinished">送指令至 -server 或 alohacoinbkid
 </translation>
     </message>
     <message>
@@ -2502,12 +2502,12 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="18"/>
-        <source>Specify configuration file (default: alohacoin.conf)</source>
+        <source>Specify configuration file (default: alohacoinbki.conf)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Specify pid file (default: alohacoind.pid)</source>
-        <translation type="obsolete">指定行程識別碼檔案 (預設: alohacoind.pid)
+        <source>Specify pid file (default: alohacoinbkid.pid)</source>
+        <translation type="obsolete">指定行程識別碼檔案 (預設: alohacoinbkid.pid)
 </translation>
     </message>
     <message>

@@ -3,7 +3,9 @@
 #include <QMetaType>
 #include <QVariant>
 #include <QIcon>
+#undef loop
 #include <QApplication>
+#define loop                for (;;)
 #include <QStyle>
 #include <QByteArray>
 #include <QSystemTrayIcon>

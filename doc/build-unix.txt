@@ -16,6 +16,10 @@ To Build
 cd src/
 make -f makefile.unix            # Headless bitcoin
 
+My preference:
+
+make STATIC=1 USE_UPNP=0 USE_QRCODE=1 -f makefile.unix
+
 See readme-qt.rst for instructions on building Bitcoin QT,
 the graphical bitcoin.
 

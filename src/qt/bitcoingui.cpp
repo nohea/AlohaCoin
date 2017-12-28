@@ -34,7 +34,9 @@
 #include "macdockiconhandler.h"
 #endif
 
+#undef loop
 #include <QApplication>
+#define loop                for (;;)
 #include <QMainWindow>
 #include <QMenuBar>
 #include <QMenu>
@@ -59,6 +61,8 @@
 #include <QDragEnterEvent>
 #include <QUrl>
 
+#include <QMimeData>
+
 #include <iostream>
 
 BitcoinGUI::BitcoinGUI(QWidget *parent):
@@ -73,7 +77,7 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     rpcConsole(0)
 {
     resize(850, 550);
-    setWindowTitle(tr("Alohacoin (Alohacoin) Wallet"));
+    setWindowTitle(tr("Alohacoin (BKI) Wallet"));
 #ifndef Q_WS_MAC
     setWindowIcon(QIcon(":icons/alohacoin"));
 #else
@@ -821,7 +825,11 @@ void BitcoinGUI::encryptWallet(bool status)
 
 void BitcoinGUI::backupWallet()
 {
+#if QT_VERSION >= QT_VERSION_CHECK(5,0,0)
+    QString saveDir = QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation);
+#else
     QString saveDir = QDesktopServices::storageLocation(QDesktopServices::DocumentsLocation);
+#endif
     QString filename = QFileDialog::getSaveFileName(this, tr("Backup Wallet"), saveDir, tr("Wallet Data (*.dat)"));
     if(!filename.isEmpty()) {
         if(!walletModel->backupWallet(filename)) {

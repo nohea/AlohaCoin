@@ -188,8 +188,8 @@ www.transifex.net/projects/p/AlohaCoin/</translation>
         <translation type="obsolete">Użycie:</translation>
     </message>
     <message>
-        <source>Send command to -server or alohacoind</source>
-        <translation type="obsolete">Wyślij polecenie do -server lub alohacoind</translation>
+        <source>Send command to -server or alohacoinbkid</source>
+        <translation type="obsolete">Wyślij polecenie do -server lub alohacoinbkid</translation>
     </message>
     <message>
         <source>List commands</source>
@@ -208,7 +208,7 @@ www.transifex.net/projects/p/AlohaCoin/</translation>
         <translation type="obsolete">Wskaż plik konfiguracyjny (domyślnie: AlohaCoin.conf)</translation>
     </message>
     <message>
-        <source>Specify pid file (default: alohacoind.pid)</source>
+        <source>Specify pid file (default: alohacoinbkid.pid)</source>
         <translation type="obsolete">Wskaż plik pid (domyślnie: AlohaCoin.pid)</translation>
     </message>
     <message>
@@ -2411,8 +2411,8 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="14"/>
-        <source>Send command to -server or alohacoind</source>
-        <translation type="unfinished">Wyślij polecenie do -server lub alohacoind</translation>
+        <source>Send command to -server or alohacoinbkid</source>
+        <translation type="unfinished">Wyślij polecenie do -server lub alohacoinbkid</translation>
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="15"/>
@@ -2431,11 +2431,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="18"/>
-        <source>Specify configuration file (default: alohacoin.conf)</source>
+        <source>Specify configuration file (default: alohacoinbki.conf)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Specify pid file (default: alohacoind.pid)</source>
+        <source>Specify pid file (default: alohacoinbkid.pid)</source>
         <translation type="obsolete">Wskaż plik pid (domyślnie: AlohaCoin.pid)</translation>
     </message>
     <message>

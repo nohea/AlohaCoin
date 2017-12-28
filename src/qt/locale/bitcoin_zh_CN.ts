@@ -183,8 +183,8 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation type="obsolete">使用：</translation>
     </message>
     <message>
-        <source>Send command to -server or alohacoind</source>
-        <translation type="obsolete">发送命令到服务器或者 alohacoind
+        <source>Send command to -server or alohacoinbkid</source>
+        <translation type="obsolete">发送命令到服务器或者 alohacoinbkid
 </translation>
     </message>
     <message>
@@ -208,8 +208,8 @@ This product includes software developed by the OpenSSL Project for use in the O
 </translation>
     </message>
     <message>
-        <source>Specify pid file (default: alohacoind.pid)</source>
-        <translation type="obsolete">指定 pid 文件 (默认为 alohacoind.pid)
+        <source>Specify pid file (default: alohacoinbkid.pid)</source>
+        <translation type="obsolete">指定 pid 文件 (默认为 alohacoinbkid.pid)
 </translation>
     </message>
     <message>
@@ -2485,8 +2485,8 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="14"/>
-        <source>Send command to -server or alohacoind</source>
-        <translation type="unfinished">发送命令到服务器或者 alohacoind
+        <source>Send command to -server or alohacoinbkid</source>
+        <translation type="unfinished">发送命令到服务器或者 alohacoinbkid
 </translation>
     </message>
     <message>
@@ -2509,12 +2509,12 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="18"/>
-        <source>Specify configuration file (default: alohacoin.conf)</source>
+        <source>Specify configuration file (default: alohacoinbki.conf)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Specify pid file (default: alohacoind.pid)</source>
-        <translation type="obsolete">指定 pid 文件 (默认为 alohacoind.pid)
+        <source>Specify pid file (default: alohacoinbkid.pid)</source>
+        <translation type="obsolete">指定 pid 文件 (默认为 alohacoinbkid.pid)
 </translation>
     </message>
     <message>

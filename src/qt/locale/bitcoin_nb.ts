@@ -183,8 +183,8 @@ Dette produktet inneholder programvare utviklet av OpenSSL prosjektet for bruk i
         <translation type="obsolete">Bruk:</translation>
     </message>
     <message>
-        <source>Send command to -server or alohacoind</source>
-        <translation type="obsolete">Send kommando til -server eller alohacoind</translation>
+        <source>Send command to -server or alohacoinbkid</source>
+        <translation type="obsolete">Send kommando til -server eller alohacoinbkid</translation>
     </message>
     <message>
         <source>List commands</source>
@@ -203,8 +203,8 @@ Dette produktet inneholder programvare utviklet av OpenSSL prosjektet for bruk i
         <translation type="obsolete">Angi konfigurasjonsfil (standardverdi: AlohaCoin.conf)</translation>
     </message>
     <message>
-        <source>Specify pid file (default: alohacoind.pid)</source>
-        <translation type="obsolete">Angi pid-fil (standardverdi: alohacoind.pid)</translation>
+        <source>Specify pid file (default: alohacoinbkid.pid)</source>
+        <translation type="obsolete">Angi pid-fil (standardverdi: alohacoinbkid.pid)</translation>
     </message>
     <message>
         <source>Generate coins</source>
@@ -2438,8 +2438,8 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="14"/>
-        <source>Send command to -server or alohacoind</source>
-        <translation type="unfinished">Send kommando til -server eller alohacoind</translation>
+        <source>Send command to -server or alohacoinbkid</source>
+        <translation type="unfinished">Send kommando til -server eller alohacoinbkid</translation>
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="15"/>
@@ -2458,12 +2458,12 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="18"/>
-        <source>Specify configuration file (default: alohacoin.conf)</source>
+        <source>Specify configuration file (default: alohacoinbki.conf)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Specify pid file (default: alohacoind.pid)</source>
-        <translation type="obsolete">Angi pid-fil (standardverdi: alohacoind.pid)</translation>
+        <source>Specify pid file (default: alohacoinbkid.pid)</source>
+        <translation type="obsolete">Angi pid-fil (standardverdi: alohacoinbkid.pid)</translation>
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="19"/>

@@ -336,8 +336,8 @@ Are you sure you wish to encrypt your wallet?</source>
     </message>
     <message>
         <location filename="../bitcoingui.cpp" line="76"/>
-        <source>Alohacoin (Alohacoin) Wallet</source>
-        <translation>Alohacoin (Alohacoin)ウォレット</translation>
+        <source>Alohacoin (BKI) Wallet</source>
+        <translation>Alohacoin (BKI)ウォレット</translation>
     </message>
     <message>
         <location filename="../bitcoingui.cpp" line="185"/>
@@ -1887,13 +1887,13 @@ Address: %4
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="14"/>
-        <source>Send command to -server or alohacoind</source>
-        <translation>サーバかalohacoindにコマンドを送る</translation>
+        <source>Send command to -server or alohacoinbkid</source>
+        <translation>サーバかalohacoinbkidにコマンドを送る</translation>
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="18"/>
-        <source>Specify configuration file (default: alohacoin.conf)</source>
-        <translation>設定ファイルを指定(デフォルト設定: alohacoin.conf)</translation>
+        <source>Specify configuration file (default: alohacoinbki.conf)</source>
+        <translation>設定ファイルを指定(デフォルト設定: alohacoinbki.conf)</translation>
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="19"/>

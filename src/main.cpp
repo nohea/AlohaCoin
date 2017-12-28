@@ -916,7 +916,7 @@ int64 GetProofOfWorkReward(int64 nFees)
       {
     nSubsidy = 1708888008214;
 	if (fDebug && GetBoolArg("-printcreation"))
-	  printf("GetProofOfWorkReward() : create=%s nSubsidy=%"PRI64d" nFees=%"PRI64d"\n", FormatMoney(nSubsidy).c_str(), nSubsidy, nFees);
+	  printf("GetProofOfWorkReward() : create=%s nSubsidy=%" PRI64d" nFees=%" PRI64d"\n", FormatMoney(nSubsidy).c_str(), nSubsidy, nFees);
 	break;
       }
     if(height < BLOCKS_CONSTANT_END_OF_POW)  // 26880000 blocks (the end of POW)
@@ -928,7 +928,7 @@ int64 GetProofOfWorkReward(int64 nFees)
         nSubsidy = nSubsidy * 1 / 2;  // interest rate
 	  }
 	if (fDebug && GetBoolArg("-printcreation"))
-	  printf("GetProofOfWorkReward() : create=%s nSubsidy=%"PRI64d" nFees=%"PRI64d" nStep=%d\n", FormatMoney(nSubsidy).c_str(), nSubsidy, nFees, nStep);
+	  printf("GetProofOfWorkReward() : create=%s nSubsidy=%" PRI64d" nFees=%" PRI64d" nStep=%d\n", FormatMoney(nSubsidy).c_str(), nSubsidy, nFees, nStep);
       }
   }while(0);
   return nSubsidy + nFees;
@@ -954,7 +954,7 @@ int64 GetProofOfStakeReward(int64 nCoinAge, int64 nFees)
     }
   int64 nSubsidy = nCoinAge * nRewardCoinYear / 365;
   if (fDebug && GetBoolArg("-printcreation"))
-    printf("GetProofOfStakeReward(): create=%s nCoinAge=%"PRI64d"\n", FormatMoney(nSubsidy).c_str(), nCoinAge);
+    printf("GetProofOfStakeReward(): create=%s nCoinAge=%" PRI64d"\n", FormatMoney(nSubsidy).c_str(), nCoinAge);
 
   return nSubsidy + nFees;
 }
@@ -1507,7 +1507,7 @@ bool CBlock::ConnectBlock(CTxDB& txdb, CBlockIndex* pindex)
       int64 nReward = GetProofOfWorkReward(nFees);
       // Check coinbase reward
       if (vtx[0].GetValueOut() > nReward)
-	return DoS(50, error("ConnectBlock() : coinbase reward exceeded (actual=%"PRI64d" vs calculated=%"PRI64d")",
+	return DoS(50, error("ConnectBlock() : coinbase reward exceeded (actual=%" PRI64d" vs calculated=%" PRI64d")",
 			     vtx[0].GetValueOut(),
 			     nReward));
     }
@@ -1831,7 +1831,7 @@ bool CBlock::GetCoinAge(uint64& nCoinAge) const
     if (nCoinAge == 0) // block coin age minimum 1 coin-day
         nCoinAge = 1;
     if (fDebug && GetBoolArg("-printcoinage"))
-        printf("block coin age total nCoinDays=%"PRI64d"\n", nCoinAge);
+        printf("block coin age total nCoinDays=%" PRI64d"\n", nCoinAge);
     return true;
 }
 
@@ -1879,11 +1879,14 @@ bool CBlock::AddToBlockIndex(unsigned int nFile, unsigned int nBlockPos)
     pindexNew->SetStakeModifier(nStakeModifier, fGeneratedStakeModifier);
     pindexNew->nStakeModifierChecksum = GetStakeModifierChecksum(pindexNew);
     if (!CheckStakeModifierCheckpoints(pindexNew->nHeight, pindexNew->nStakeModifierChecksum))
+#ifdef WIN32
         // MinGW
-        //return error("AddToBlockIndex() : Rejected by stake modifier checkpoint height=%d, modifier=0x%016PRIx64, modifierCheckSum=0x%08PRIx64", pindexNew->nHeight, nStakeModifier, pindexNew->nStakeModifierChecksum);
+        return error("AddToBlockIndex() : Rejected by stake modifier checkpoint height=%d, modifier=0x%016PRIx64, modifierCheckSum=0x%08PRIx64", pindexNew->nHeight, nStakeModifier, pindexNew->nStakeModifierChecksum);
+#endif
+#ifndef WIN32
         // GCC
-        return error("AddToBlockIndex() : Rejected by stake modifier checkpoint height=%d, modifier=0x%016"PRIx64", modifierCheckSum=0x%08"PRIx64, pindexNew->nHeight, nStakeModifier, pindexNew->nStakeModifierChecksum);
-
+        return error("AddToBlockIndex() : Rejected by stake modifier checkpoint height=%d, modifier=0x%016" PRIx64", modifierCheckSum=0x%08" PRIx64, pindexNew->nHeight, nStakeModifier, pindexNew->nStakeModifierChecksum);
+#endif
     // Add to mapBlockIndex
     map<uint256, CBlockIndex*>::iterator mi = mapBlockIndex.insert(make_pair(hash, pindexNew)).first;
     if (pindexNew->IsProofOfStake())
@@ -3348,7 +3351,7 @@ bool ProcessMessages(CNode* pfrom)
     {
         string strMessageStart((const char *)pchMessageStart, sizeof(pchMessageStart));
         vector<unsigned char> vchMessageStart(strMessageStart.begin(), strMessageStart.end());
-        printf("ProcessMessages : AdjustedTime=%"PRI64d" MessageStart=%s\n", GetAdjustedTime(), HexStr(vchMessageStart).c_str());
+        printf("ProcessMessages : AdjustedTime=%" PRI64d" MessageStart=%s\n", GetAdjustedTime(), HexStr(vchMessageStart).c_str());
         nTimeLastPrintMessageStart = GetAdjustedTime();
     }
 
@@ -3784,7 +3787,7 @@ CBlock* CreateNewBlock(CReserveKey& reservekey, CWallet* pwallet, bool fProofOfS
                 dPriority += (double)nValueIn * nConf;
 
                 if (fDebug && GetBoolArg("-printpriority"))
-                    printf("priority     nValueIn=%-12"PRI64d" nConf=%-5d dPriority=%-20.1f\n", nValueIn, nConf, dPriority);
+                    printf("priority     nValueIn=%-12" PRI64d" nConf=%-5d dPriority=%-20.1f\n", nValueIn, nConf, dPriority);
             }
 
             // Priority is sum(valuein * age) / txsize

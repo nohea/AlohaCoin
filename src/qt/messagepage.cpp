@@ -12,8 +12,10 @@
 #include "init.h"
 #include "base58.h"
 
+#undef loop
 #include "messagepage.h"
 #include "ui_messagepage.h"
+#define loop                for (;;)
 
 #include "addressbookpage.h"
 #include "guiutil.h"
@@ -105,3 +107,4 @@ void MessagePage::on_signMessage_clicked()
     ui->signature->setText(QString::fromStdString(EncodeBase64(&vchSig[0], vchSig.size())));
     ui->signature->setFont(GUIUtil::bitcoinAddressFont());
 }
+

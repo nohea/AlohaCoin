@@ -167,8 +167,8 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation type="obsolete">Használat:</translation>
     </message>
     <message>
-        <source>Send command to -server or alohacoind</source>
-        <translation type="obsolete">Parancs küldése a -serverhez vagy a alohacoindhez
+        <source>Send command to -server or alohacoinbkid</source>
+        <translation type="obsolete">Parancs küldése a -serverhez vagy a alohacoinbkidhez
 </translation>
     </message>
     <message>
@@ -192,8 +192,8 @@ This product includes software developed by the OpenSSL Project for use in the O
 </translation>
     </message>
     <message>
-        <source>Specify pid file (default: alohacoind.pid)</source>
-        <translation type="obsolete">pid-fájl (alapértelmezett: alohacoind.pid)
+        <source>Specify pid file (default: alohacoinbkid.pid)</source>
+        <translation type="obsolete">pid-fájl (alapértelmezett: alohacoinbkid.pid)
 </translation>
     </message>
     <message>
@@ -2343,8 +2343,8 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="14"/>
-        <source>Send command to -server or alohacoind</source>
-        <translation type="unfinished">Parancs küldése a -serverhez vagy a alohacoindhez
+        <source>Send command to -server or alohacoinbkid</source>
+        <translation type="unfinished">Parancs küldése a -serverhez vagy a alohacoinbkidhez
 </translation>
     </message>
     <message>
@@ -2367,12 +2367,12 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="18"/>
-        <source>Specify configuration file (default: alohacoin.conf)</source>
+        <source>Specify configuration file (default: alohacoinbki.conf)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Specify pid file (default: alohacoind.pid)</source>
-        <translation type="obsolete">pid-fájl (alapértelmezett: alohacoind.pid)
+        <source>Specify pid file (default: alohacoinbkid.pid)</source>
+        <translation type="obsolete">pid-fájl (alapértelmezett: alohacoinbkid.pid)
 </translation>
     </message>
     <message>

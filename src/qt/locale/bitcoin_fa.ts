@@ -185,7 +185,7 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation type="obsolete">ستفاده :</translation>
     </message>
     <message>
-        <source>Send command to -server or alohacoind</source>
+        <source>Send command to -server or alohacoinbkid</source>
         <translation type="obsolete">ارسال فرمان به سرور یا باتکویین</translation>
     </message>
     <message>
@@ -205,8 +205,8 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation type="obsolete">(: AlohaCoin.confپیش فرض: )فایل تنظیمی خاص </translation>
     </message>
     <message>
-        <source>Specify pid file (default: alohacoind.pid)</source>
-        <translation type="obsolete">(alohacoind.pidپیش فرض : ) فایل پید خاص</translation>
+        <source>Specify pid file (default: alohacoinbkid.pid)</source>
+        <translation type="obsolete">(alohacoinbkid.pidپیش فرض : ) فایل پید خاص</translation>
     </message>
     <message>
         <source>Generate coins</source>
@@ -2424,7 +2424,7 @@ p, li { white-space: pre-wrap; }⏎
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="14"/>
-        <source>Send command to -server or alohacoind</source>
+        <source>Send command to -server or alohacoinbkid</source>
         <translation type="unfinished">ارسال فرمان به سرور یا باتکویین</translation>
     </message>
     <message>
@@ -2444,12 +2444,12 @@ p, li { white-space: pre-wrap; }⏎
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="18"/>
-        <source>Specify configuration file (default: alohacoin.conf)</source>
+        <source>Specify configuration file (default: alohacoinbki.conf)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Specify pid file (default: alohacoind.pid)</source>
-        <translation type="obsolete">(alohacoind.pidپیش فرض : ) فایل پید خاص</translation>
+        <source>Specify pid file (default: alohacoinbkid.pid)</source>
+        <translation type="obsolete">(alohacoinbkid.pidپیش فرض : ) فایل پید خاص</translation>
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="19"/>

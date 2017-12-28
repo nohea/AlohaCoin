@@ -11,7 +11,9 @@
 #include <QKeyEvent>
 #include <QDoubleSpinBox>
 #include <QComboBox>
+#undef loop
 #include <QApplication>
+#define loop                for (;;)
 #include <qmath.h>
 
 BitcoinAmountField::BitcoinAmountField(QWidget *parent):

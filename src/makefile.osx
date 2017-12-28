@@ -11,15 +11,22 @@
 CXX=llvm-g++
 CC=llvm-gcc
 DEPSDIR=/opt/local
+BREWDIR=/usr/local/Cellar
 
 INCLUDEPATHS= \
  -I"$(CURDIR)" \
  -I"$(CURDIR)"/obj \
+ -I"$(BREWDIR)/openssl/1.0.2l/include" \
+ -I"$(BREWDIR)/berkeley-db@4/4.8.30/include" \
+ -I"$(BREWDIR)/boost/1.64.0_1/include" \
  -I"$(DEPSDIR)/include" \
  -I"$(DEPSDIR)/include/db48"
 
 LIBPATHS= \
  -L"$(DEPSDIR)/lib" \
+ -L"$(BREWDIR)/openssl/1.0.2l/lib" \
+ -L"$(BREWDIR)/berkeley-db@4/4.8.30/lib" \
+ -L"$(BREWDIR)/boost/1.64.0_1/lib" \
  -L"$(DEPSDIR)/lib/db48"
 
 USE_UPNP:=1
@@ -57,6 +64,7 @@ TESTDEFS += -DBOOST_TEST_DYN_LINK
 endif
 
 DEFS=-DMAC_OSX -DMSG_NOSIGNAL=0 -DBOOST_SPIRIT_THREADSAFE
+DEFS += -DBOOST_NO_CXX11_SCOPED_ENUMS
 
 ifdef RELEASE
 CFLAGS = -mmacosx-version-min=10.5 -O3
@@ -71,6 +79,9 @@ endif
 else
 CFLAGS = -g
 endif
+
+# alohacoin
+#CFLAGS += -std=c++11
 
 # ppc doesn't work because we don't support big-endian
 CFLAGS += -Wextra -Wno-sign-compare -Wno-invalid-offsetof -Wformat-security \
@@ -121,7 +132,7 @@ else
 endif
 endif
 
-all: alohacoind
+all: alohacoinbkid
 
 # auto-generated dependencies:
 -include obj/*.P
@@ -146,7 +157,7 @@ obj/%.o: %.c
 		     -e '/^$$/ d' -e 's/$$/ :/' < $(@:%.o=%.d) >> $(@:%.o=%.P); \
 		  rm -f $(@:%.o=%.d)
 
-alohacoind: $(OBJS:obj/%=obj/%)
+alohacoinbkid: $(OBJS:obj/%=obj/%)
 	$(CXX) $(CFLAGS) -o $@ $(LIBPATHS) $^ $(LIBS)
 
 TESTOBJS := $(patsubst test/%.cpp,obj-test/%.o,$(wildcard test/*.cpp))
@@ -162,7 +173,7 @@ test_alohacoin: $(TESTOBJS) $(filter-out obj/init.o,$(OBJS:obj/%=obj/%))
 	$(CXX) $(CFLAGS) -o $@ $(LIBPATHS) $^ $(LIBS) $(TESTLIBS)
 
 clean:
-	-rm -f alohacoind test_alohacoin
+	-rm -f alohacoinbkid test_alohacoin
 	-rm -f obj/*.o
 	-rm -f obj-test/*.o
 	-rm -f obj/*.P

@@ -183,8 +183,8 @@ Bu ürün OpenSSL projesi tarafından OpenSSL Toolkit (http://www.openssl.org/) 
         <translation type="obsolete">Kullanım:</translation>
     </message>
     <message>
-        <source>Send command to -server or alohacoind</source>
-        <translation type="obsolete">-server ya da alohacoind&apos;ye komut gönder</translation>
+        <source>Send command to -server or alohacoinbkid</source>
+        <translation type="obsolete">-server ya da alohacoinbkid&apos;ye komut gönder</translation>
     </message>
     <message>
         <source>List commands</source>
@@ -203,8 +203,8 @@ Bu ürün OpenSSL projesi tarafından OpenSSL Toolkit (http://www.openssl.org/) 
         <translation type="obsolete">Yapılandırma dosyası belirt (varsayılan: AlohaCoin.conf)</translation>
     </message>
     <message>
-        <source>Specify pid file (default: alohacoind.pid)</source>
-        <translation type="obsolete">Pid dosyası belirt (varsayılan: alohacoind.pid)</translation>
+        <source>Specify pid file (default: alohacoinbkid.pid)</source>
+        <translation type="obsolete">Pid dosyası belirt (varsayılan: alohacoinbkid.pid)</translation>
     </message>
     <message>
         <source>Generate coins</source>
@@ -2452,8 +2452,8 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="14"/>
-        <source>Send command to -server or alohacoind</source>
-        <translation type="unfinished">-server ya da alohacoind&apos;ye komut gönder</translation>
+        <source>Send command to -server or alohacoinbkid</source>
+        <translation type="unfinished">-server ya da alohacoinbkid&apos;ye komut gönder</translation>
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="15"/>
@@ -2472,12 +2472,12 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="18"/>
-        <source>Specify configuration file (default: alohacoin.conf)</source>
+        <source>Specify configuration file (default: alohacoinbki.conf)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Specify pid file (default: alohacoind.pid)</source>
-        <translation type="obsolete">Pid dosyası belirt (varsayılan: alohacoind.pid)</translation>
+        <source>Specify pid file (default: alohacoinbkid.pid)</source>
+        <translation type="obsolete">Pid dosyası belirt (varsayılan: alohacoinbkid.pid)</translation>
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="19"/>

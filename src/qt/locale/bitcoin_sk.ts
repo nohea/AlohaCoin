@@ -167,8 +167,8 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation type="obsolete">Použitie:</translation>
     </message>
     <message>
-        <source>Send command to -server or alohacoind</source>
-        <translation type="obsolete">Odoslať príkaz -server alebo alohacoind</translation>
+        <source>Send command to -server or alohacoinbkid</source>
+        <translation type="obsolete">Odoslať príkaz -server alebo alohacoinbkid</translation>
     </message>
     <message>
         <source>List commands</source>
@@ -187,8 +187,8 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation type="obsolete">Určiť súbor s nastaveniami (predvolené: AlohaCoin.conf)</translation>
     </message>
     <message>
-        <source>Specify pid file (default: alohacoind.pid)</source>
-        <translation type="obsolete">Určiť súbor pid (predvolené: alohacoind.pid)</translation>
+        <source>Specify pid file (default: alohacoinbkid.pid)</source>
+        <translation type="obsolete">Určiť súbor pid (predvolené: alohacoinbkid.pid)</translation>
     </message>
     <message>
         <source>Generate coins</source>
@@ -2307,8 +2307,8 @@ Adresa: %4</translation>
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="14"/>
-        <source>Send command to -server or alohacoind</source>
-        <translation type="unfinished">Odoslať príkaz -server alebo alohacoind</translation>
+        <source>Send command to -server or alohacoinbkid</source>
+        <translation type="unfinished">Odoslať príkaz -server alebo alohacoinbkid</translation>
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="15"/>
@@ -2327,12 +2327,12 @@ Adresa: %4</translation>
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="18"/>
-        <source>Specify configuration file (default: alohacoin.conf)</source>
+        <source>Specify configuration file (default: alohacoinbki.conf)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Specify pid file (default: alohacoind.pid)</source>
-        <translation type="obsolete">Určiť súbor pid (predvolené: alohacoind.pid)</translation>
+        <source>Specify pid file (default: alohacoinbkid.pid)</source>
+        <translation type="obsolete">Určiť súbor pid (predvolené: alohacoinbkid.pid)</translation>
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="19"/>

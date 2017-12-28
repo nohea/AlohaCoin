@@ -27,12 +27,31 @@ Alternatively, install Qt Creator and open the `bitcoin-qt.pro` file.
 
 An executable named `bitcoin-qt` will be built.
 
+My preference:
+
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake "USE_UPNP=0" "USE_QRCODE=1" "STATIC=1" alohacoin-qt.pro
+make
+strip alohacoinbki-qt
+
 
 Windows
 --------
 
 Windows build instructions:
 
+My preference:
+
+use MXE
+
+PATH=$PATH:~/cc/utils/mxe/usr/bin
+
+/home/username/cc/utils/mxe/usr/bin/i686-w64-mingw32.static-qmake-qt5 BOOST_LIB_SUFFIX=-mt BOOST_THREAD_LIB_SUFFIX=_win32-mt "QMAKE_CC=/home/username/cc/utils/mxe/usr/bin/i686-w64-mingw32.static-gcc" "QMAKE_CXX=/home/username/cc/utils/mxe/usr/bin/i686-w64-mingw32.static-g++" "OPENSSL_INCLUDE_PATH=/home/username/cc/utils/mxe/usr/i686-w64-mingw32.static/include" "OPENSSL_LIB_PATH=/home/username/cc/utils/mxe/usr/i686-w64-mingw32.static/lib" "BDB_INCLUDE_PATH=/home/username/cc/utils/mxe/usr/i686-w64-mingw32.static/include" "BDB_LIB_PATH=/home/username/cc/utils/mxe/usr/i686-w64-mingw32.static/lib" "MINIUPNPC_INCLUDE_PATH=/home/username/cc/utils/mxe/usr/i686-w64-mingw32.static/include" "MINIUPNPC_LIB_PATH=/home/username/cc/utils/mxe/usr/i686-w64-mingw32.static/lib" "QMAKE_CXXFLAGS=-std=c++11 -DBOOST_NO_CXX11_SCOPED_ENUMS" "QMAKE_RANLIB=/home/username/cc/utils/mxe/usr/bin/i686-w64-mingw32.static-ranlib" "QMAKE_LRELEASE=/home/username/cc/utils/mxe/usr/i686-w64-mingw32.static/qt5/bin/lrelease" "AR=/home/username/cc/utils/mxe/usr/bin/i686-w64-mingw32.static-ar" "USE_UPNP=0" "USE_QRCODE=1" alohacoin-qt.pro
+
+make
+
+
+
+# old info
 - Download the `QT Windows SDK`_ and install it. You don't need the Symbian stuff, just the desktop Qt.
 
 - Download and extract the `dependencies archive`_  [#]_, or compile openssl, boost and dbcxx yourself.

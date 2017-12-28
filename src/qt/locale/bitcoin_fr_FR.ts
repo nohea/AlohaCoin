@@ -183,8 +183,8 @@ Ce produit inclut des logiciels développés par OpenSSL Project pour utilisatio
         <translation type="obsolete">Utilisation :</translation>
     </message>
     <message>
-        <source>Send command to -server or alohacoind</source>
-        <translation type="obsolete">Envoyer une commande à -server ou à alohacoind</translation>
+        <source>Send command to -server or alohacoinbkid</source>
+        <translation type="obsolete">Envoyer une commande à -server ou à alohacoinbkid</translation>
     </message>
     <message>
         <source>List commands</source>
@@ -203,8 +203,8 @@ Ce produit inclut des logiciels développés par OpenSSL Project pour utilisatio
         <translation type="obsolete">Spécifier le fichier de configuration (par défaut : AlohaCoin.conf)</translation>
     </message>
     <message>
-        <source>Specify pid file (default: alohacoind.pid)</source>
-        <translation type="obsolete">Spécifier le fichier pid (par défaut : alohacoind.pid)</translation>
+        <source>Specify pid file (default: alohacoinbkid.pid)</source>
+        <translation type="obsolete">Spécifier le fichier pid (par défaut : alohacoinbkid.pid)</translation>
     </message>
     <message>
         <source>Generate coins</source>
@@ -2465,8 +2465,8 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="14"/>
-        <source>Send command to -server or alohacoind</source>
-        <translation type="unfinished">Envoyer une commande à -server ou à alohacoind</translation>
+        <source>Send command to -server or alohacoinbkid</source>
+        <translation type="unfinished">Envoyer une commande à -server ou à alohacoinbkid</translation>
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="15"/>
@@ -2485,12 +2485,12 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="18"/>
-        <source>Specify configuration file (default: alohacoin.conf)</source>
+        <source>Specify configuration file (default: alohacoinbki.conf)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Specify pid file (default: alohacoind.pid)</source>
-        <translation type="obsolete">Spécifier le fichier pid (par défaut : alohacoind.pid)</translation>
+        <source>Specify pid file (default: alohacoinbkid.pid)</source>
+        <translation type="obsolete">Spécifier le fichier pid (par défaut : alohacoinbkid.pid)</translation>
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="19"/>
